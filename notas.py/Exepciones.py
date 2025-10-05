@@ -8,7 +8,7 @@ def multiplica(num1, num2):
 	return num1*num2
 
 def divide(num1, num2):
-    try:
+    try:               #Es utilizado para saltar un error y que el programa siga el flujo normal
         return num1 / num2
     except ZeroDivisionError:
         print("No se puede dividir entre 0")
@@ -16,11 +16,21 @@ def divide(num1, num2):
 
     
     
-	
+while True :
+ try:
+        op1=(int(input("Introduce el primer número: ")))
 
-op1=(int(input("Introduce el primer número: ")))
-
-op2=(int(input("Introduce el segundo número: ")))		
+        op2=(int(input("Introduce el segundo número: ")))
+        break
+ 
+ except ValueError:
+    	
+        print("Los valores introducidos no son correctos")
+        
+    
+    
+    
+    
 	
 operacion=input("Introduce la operación a realizar (suma,resta,multiplica,divide): ")
 
@@ -42,3 +52,4 @@ else:
 
 
 print("Operación ejecutada. Continuación de ejecúción del programa ")
+
