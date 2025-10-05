@@ -1,0 +1,10 @@
+LIstapersonal=[]
+nombre = input("Nombre")
+LIstapersonal.insert(0,nombre)
+Direccion = input("Direccion")
+LIstapersonal.insert(1,Direccion)
+Telefono = input("Telefono")
+LIstapersonal.insert(2,Telefono)
+print("Su nombre",nombre)
+print("Direccion",Direccion)
+print("Telefono",Telefono)
