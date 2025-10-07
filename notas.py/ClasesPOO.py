@@ -22,29 +22,38 @@ print("El color de mi TV es :",mitv.color)
 mitv.encender()
 print( mitv.estado2()) 
 """
-class coche:
-  
-  def __init__(self):   #Constructor
-  
-    self.largochasis=250
-    self.anchochasis=120
-    self.__ruedas=4    #Encapsulamiento 
-    self.enmarcha=False
-  
-  
-  def arrancar(self,arrancancamos):
+def arrancar(self,arrancancamos):
     self.enmarcha = arrancancamos
-    if(self.enmarcha):
+    if(self.arrancar):
+     
+     chqueking = self.chequeo()
+    
+    if(self.enmarcha and chqueking):
         return print("El coche esta en marcha")
+    elif(self.enmarcha and chqueking==False):
+          
+      return print("Algo ha ido mal en el chequeo, no podemos arrancar")
         
     else:
         return print("El coche esta parado")
+    def chequeo (self):
+        print("Realizando chequeo interno")
+    self.aceite="ok"
+    self.puertas="cerradas"
+    self.gasolina="ok"
+     
+    if(self.gasolina=="ok"and self.puertas=="cerradas" and self.aceite=="ok"):
+       return True
+     
+    else:
+       return False
+    
       
   def estado(self):
     print("El coche tiene",self.anchochasis,self.largochasis,"De largo",self.__ruedas,"Ruedas")
       
 
 micoche = coche()
-micoche.arrancar(False)
-micoche.estado()
-micoche.ruedas=3
+print(micoche.arrancar(True))
+
+
